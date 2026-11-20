@@ -3,28 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <title>Sustentación tesis de maestría – José Julián Parra</title>
 <meta name="description" content="Encuesta de horarios para la sustentación de tesis de maestría de José Julián Parra: del lunes 30 de noviembre al sábado 5 de diciembre de 2026, de 7:00 a 18:00.">
 <style>
   :root{
+    color-scheme:light;
     --bg:#ffffff; --ink:#222222; --muted:#666666; --line:#c8c8c8; --field:#ffffff;
     --accent:#1f4e79; --accent-ink:#ffffff; --free:#ffffff; --sel:#1f4e79; --sel-ink:#ffffff;
     --h1:#e3edf6; --h2:#bdd3e8; --h3:#86aed3; --h4:#4d82b5; --h5:#1f4e79; --h5-ink:#ffffff;
     --ok:#2e6b3a; --warn:#7a4f00; --warn-bg:#fdf6e3; --warn-line:#e0cf9c; --danger:#a12a2a;
-  }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --bg:#17191c; --ink:#e6e6e6; --muted:#a3a3a3; --line:#3d4046; --field:#1f2226;
-      --accent:#8fb8de; --accent-ink:#17191c; --free:#17191c; --sel:#8fb8de; --sel-ink:#17191c;
-      --h1:#22303d; --h2:#2c4660; --h3:#3b6288; --h4:#5a8cba; --h5:#8fb8de; --h5-ink:#17191c;
-      --ok:#7fc28c; --warn:#e2c078; --warn-bg:#2a2518; --warn-line:#574a26; --danger:#e58a8a;
-    }
-  }
-  :root[data-theme="dark"]{
-    --bg:#17191c; --ink:#e6e6e6; --muted:#a3a3a3; --line:#3d4046; --field:#1f2226;
-    --accent:#8fb8de; --accent-ink:#17191c; --free:#17191c; --sel:#8fb8de; --sel-ink:#17191c;
-    --h1:#22303d; --h2:#2c4660; --h3:#3b6288; --h4:#5a8cba; --h5:#8fb8de; --h5-ink:#17191c;
-    --ok:#7fc28c; --warn:#e2c078; --warn-bg:#2a2518; --warn-line:#574a26; --danger:#e58a8a;
   }
   *{box-sizing:border-box}
   html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Segoe UI",Arial,Helvetica,sans-serif}
@@ -74,7 +62,9 @@
   .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.85rem;color:var(--muted);margin:10px 0 0}
   .legend span i{display:inline-block;width:13px;height:13px;border:1px solid var(--line);vertical-align:-2px;margin-right:5px}
   .status{min-height:1.4em;font-size:.9rem}
-  .status.ok{color:var(--ok)} .status.warn{color:var(--danger)}
+  .status.ok,.status.warn{padding:6px 10px;border:1px solid;font-weight:600}
+  .status.ok{color:var(--ok);background:#eef6ef;border-color:#b5d6bb}
+  .status.warn{color:var(--danger);background:#fbeeee;border-color:#e3bcbc}
   .code{display:flex;gap:8px;align-items:center;margin-top:10px;flex-wrap:wrap}
   .code input{font-family:Consolas,monospace;font-size:.85rem;flex:1 1 260px;width:auto}
   h2{font-size:1rem;margin:22px 0 6px}
@@ -142,10 +132,10 @@
       <button class="btn" id="btnAll" type="button">Marcar todo</button>
     </div>
     <div class="scroll"><table class="grid" id="gridMine" aria-label="Horas disponibles"></table></div>
-    <div class="row" style="margin-top:16px;align-items:center">
+    <div style="margin-top:16px">
       <button class="btn primary" id="btnSave" type="button">Enviar disponibilidad</button>
-      <span class="status" id="statusMine" role="status"></span>
     </div>
+    <div class="status" id="statusMine" role="status" style="margin-top:10px"></div>
     <div class="code" id="codeBox" hidden>
       <input type="text" id="codeOut" readonly aria-label="Código de su respuesta">
       <button class="btn" id="btnCopy" type="button">Copiar código</button>
