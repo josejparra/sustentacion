@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sustentación tesis de maestría – José Julián Parra</title>
+<meta name="description" content="Encuesta de horarios para la sustentación de tesis de maestría de José Julián Parra: del lunes 30 de noviembre al sábado 5 de diciembre de 2026, de 7:00 a 18:00.">
+<style>
+  :root{
+    --bg:#ffffff; --ink:#222222; --muted:#666666; --line:#c8c8c8; --field:#ffffff;
+    --accent:#1f4e79; --accent-ink:#ffffff; --free:#ffffff; --sel:#1f4e79; --sel-ink:#ffffff;
+    --h1:#e3edf6; --h2:#bdd3e8; --h3:#86aed3; --h4:#4d82b5; --h5:#1f4e79; --h5-ink:#ffffff;
+    --ok:#2e6b3a; --warn:#7a4f00; --warn-bg:#fdf6e3; --warn-line:#e0cf9c; --danger:#a12a2a;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#17191c; --ink:#e6e6e6; --muted:#a3a3a3; --line:#3d4046; --field:#1f2226;
+      --accent:#8fb8de; --accent-ink:#17191c; --free:#17191c; --sel:#8fb8de; --sel-ink:#17191c;
+      --h1:#22303d; --h2:#2c4660; --h3:#3b6288; --h4:#5a8cba; --h5:#8fb8de; --h5-ink:#17191c;
+      --ok:#7fc28c; --warn:#e2c078; --warn-bg:#2a2518; --warn-line:#574a26; --danger:#e58a8a;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#17191c; --ink:#e6e6e6; --muted:#a3a3a3; --line:#3d4046; --field:#1f2226;
+    --accent:#8fb8de; --accent-ink:#17191c; --free:#17191c; --sel:#8fb8de; --sel-ink:#17191c;
+    --h1:#22303d; --h2:#2c4660; --h3:#3b6288; --h4:#5a8cba; --h5:#8fb8de; --h5-ink:#17191c;
+    --ok:#7fc28c; --warn:#e2c078; --warn-bg:#2a2518; --warn-line:#574a26; --danger:#e58a8a;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Segoe UI",Arial,Helvetica,sans-serif}
+  main{max-width:900px;margin:0 auto;padding:32px 16px 48px}
+  h1{font-family:Georgia,"Times New Roman",serif;font-weight:normal;font-size:1.75rem;line-height:1.25;margin:0}
+  .author{font-family:Georgia,"Times New Roman",serif;font-size:1.15rem;margin:2px 0 14px}
+  .sub{margin:0 0 16px}
+  .notice{background:var(--warn-bg);border:1px solid var(--warn-line);padding:10px 14px;margin:0 0 20px}
+  .notice strong{display:block;margin-bottom:2px}
+  .notice ul{margin:0;padding-left:20px}
+  .notice li{margin:3px 0}
+  .banner{border:1px dashed var(--line);padding:8px 12px;margin:0 0 18px;color:var(--muted);font-size:.9rem}
+  .tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:18px}
+  .tabs button{appearance:none;background:none;border:0;border-bottom:2px solid transparent;margin-bottom:-1px;padding:8px 12px;font:inherit;color:var(--muted);cursor:pointer}
+  .tabs button[aria-selected="true"]{color:var(--ink);font-weight:600;border-bottom-color:var(--accent)}
+  .row{display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin-bottom:14px}
+  label,legend{display:block;font-size:.9rem;margin-bottom:3px;padding:0}
+  input[type=text],input[type=email],textarea{width:100%;font:inherit;padding:7px 9px;border:1px solid var(--line);border-radius:2px;background:var(--field);color:var(--ink)}
+  textarea{min-height:96px;font-family:Consolas,monospace;font-size:.85rem}
+  .grow{flex:1 1 240px}
+  fieldset{border:0;margin:0 0 14px;padding:0}
+  .choices{display:flex;flex-wrap:wrap;gap:4px 22px}
+  .choices label{display:flex;align-items:center;gap:6px;margin:0;font-size:1rem;cursor:pointer}
+  .choices input{accent-color:var(--accent);margin:0}
+  .btn{appearance:none;font:inherit;padding:7px 14px;border-radius:2px;border:1px solid var(--line);background:var(--field);color:var(--ink);cursor:pointer;text-decoration:none;display:inline-block}
+  .btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);font-weight:600}
+  .btn.danger{color:var(--danger)}
+  .btn:disabled{opacity:.55;cursor:progress}
+  .hint{font-size:.9rem;color:var(--muted);margin:6px 0 12px}
+  .scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table.grid{border-collapse:collapse;min-width:620px;user-select:none;-webkit-user-select:none;width:100%}
+  table.grid th{font-weight:600;font-size:.88rem;padding:5px 4px;text-align:center}
+  table.grid thead th{border-bottom:1px solid var(--line)}
+  table.grid th small{display:block;font-weight:normal;font-size:.8rem;color:var(--muted)}
+  table.grid th.flagged{color:var(--warn)}
+  table.grid th.h{text-align:right;white-space:nowrap;padding-right:8px;font-weight:normal;font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums;width:112px}
+  table.grid td{height:30px;border:1px solid var(--line);background:var(--free);cursor:pointer;text-align:center;font-size:.85rem;font-variant-numeric:tabular-nums}
+  table.grid td:hover{box-shadow:inset 0 0 0 2px var(--accent)}
+  table.grid td:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+  #gridMine td{touch-action:manipulation}
+  table.grid td.on{background:var(--sel);color:var(--sel-ink)}
+  table.grid td.c0{background:var(--free);color:var(--muted)}
+  table.grid td.c1{background:var(--h1)} table.grid td.c2{background:var(--h2)}
+  table.grid td.c3{background:var(--h3)} table.grid td.c4{background:var(--h4);color:#fff}
+  table.grid td.c5{background:var(--h5);color:var(--h5-ink)}
+  table.grid td.best{box-shadow:inset 0 0 0 3px var(--ok);font-weight:700}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.85rem;color:var(--muted);margin:10px 0 0}
+  .legend span i{display:inline-block;width:13px;height:13px;border:1px solid var(--line);vertical-align:-2px;margin-right:5px}
+  .status{min-height:1.4em;font-size:.9rem}
+  .status.ok{color:var(--ok)} .status.warn{color:var(--danger)}
+  .code{display:flex;gap:8px;align-items:center;margin-top:10px;flex-wrap:wrap}
+  .code input{font-family:Consolas,monospace;font-size:.85rem;flex:1 1 260px;width:auto}
+  h2{font-size:1rem;margin:22px 0 6px}
+  ol.rank,ul.people{margin:0;padding-left:22px}
+  ol.rank li,ul.people li{margin:3px 0}
+  ul.people li span{color:var(--muted)}
+  ul.people li button{appearance:none;border:0;background:none;color:var(--muted);cursor:pointer;font:inherit;font-size:.85rem;text-decoration:underline;padding:0 0 0 8px}
+  ul.people li button:hover{color:var(--danger)}
+  .names{font-size:.9rem;margin-top:8px;min-height:1.4em}
+  details{margin-top:18px}
+  summary{cursor:pointer}
+  .two{display:grid;grid-template-columns:1fr;gap:16px}
+  @media (min-width:760px){.two{grid-template-columns:1fr 1fr}}
+  footer{color:var(--muted);font-size:.85rem;margin-top:32px;border-top:1px solid var(--line);padding-top:10px}
+  .short{display:none}
+  @media (max-width:640px){
+    main{padding:20px 16px 40px}
+    h1{font-size:1.45rem}
+    table.grid{min-width:0;table-layout:fixed}
+    table.grid th.h{width:44px;padding-right:4px;font-size:.78rem}
+    table.grid th{font-size:.78rem} table.grid th small{font-size:.72rem}
+    table.grid td{height:36px}
+    .long{display:none} .short{display:inline}
+  }
+  [hidden]{display:none !important}
+</style>
+</head>
+<body>
+<main>
+  <h1>Sustentación tesis de maestría</h1>
+  <p class="author">José Julián Parra</p>
+  <p class="sub">Con el fin de acordar la fecha y la hora de la sustentación, le agradezco indicar todas las horas en las que tendría disponibilidad entre el lunes 30 de noviembre y el sábado 5 de diciembre de 2026, de 7:00 a 18:00.</p>
+
+  <div class="notice" role="note" id="notice" hidden>
+    <strong>Para tener en cuenta (días marcados con *)</strong>
+    <ul id="noticeList"></ul>
+  </div>
+
+  <p class="banner" id="localBanner" hidden>Modo de prueba: todavía no hay una hoja de respuestas conectada, así que lo que se marque queda solo en este navegador.</p>
+
+  <div class="tabs" role="tablist">
+    <button role="tab" id="tab-mine" aria-selected="true" aria-controls="panel-mine">Mi disponibilidad</button>
+    <button role="tab" id="tab-results" aria-selected="false" aria-controls="panel-results">Resultados <span id="nCount"></span></button>
+  </div>
+
+  <!-- ===================== MI DISPONIBILIDAD ===================== -->
+  <section id="panel-mine" role="tabpanel" aria-labelledby="tab-mine">
+    <div class="row">
+      <div class="grow">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" autocomplete="name" maxlength="60" required>
+      </div>
+      <div class="grow">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" autocomplete="email" maxlength="120" required>
+      </div>
+    </div>
+    <fieldset>
+      <legend>¿Cómo prefiere asistir?</legend>
+      <div class="choices" id="modeChoices"></div>
+    </fieldset>
+    <div class="row" style="align-items:center;margin-bottom:4px">
+      <p class="hint grow" style="margin:0">Haga clic sobre cada hora disponible; también puede arrastrar para marcar varias. El correo no se muestra en los resultados.</p>
+      <button class="btn" id="btnClear" type="button">Limpiar</button>
+      <button class="btn" id="btnAll" type="button">Marcar todo</button>
+    </div>
+    <div class="scroll"><table class="grid" id="gridMine" aria-label="Horas disponibles"></table></div>
+    <div class="row" style="margin-top:16px;align-items:center">
+      <button class="btn primary" id="btnSave" type="button">Enviar disponibilidad</button>
+      <span class="status" id="statusMine" role="status"></span>
+    </div>
+    <div class="code" id="codeBox" hidden>
+      <input type="text" id="codeOut" readonly aria-label="Código de su respuesta">
+      <button class="btn" id="btnCopy" type="button">Copiar código</button>
+      <a class="btn" id="btnMail" href="#" hidden>Enviar por correo</a>
+    </div>
+    <p class="hint" id="codeHint" hidden>Copie este código y envíelo a quien organiza; con él se reconstruye su respuesta.</p>
+  </section>
+
+  <!-- ===================== RESULTADOS ===================== -->
+  <section id="panel-results" role="tabpanel" aria-labelledby="tab-results" hidden>
+    <p class="hint" id="resPrivate" hidden>Los resultados los consolida quien organiza. Su respuesta queda registrada al enviarla.</p>
+    <div id="resBody">
+      <p class="hint">Cada celda muestra cuántas personas pueden a esa hora. Haga clic en una celda para ver quiénes.</p>
+      <div class="scroll"><table class="grid" id="gridRes" aria-label="Resultados por hora"></table></div>
+      <div class="legend" id="legend"></div>
+      <div class="names" id="cellNames"></div>
+
+      <div class="two">
+        <div>
+          <h2>Mejores horarios</h2>
+          <ol class="rank" id="rank"></ol>
+        </div>
+        <div>
+          <h2>Respondieron (<span id="nPeople">0</span>)</h2>
+          <ul class="people" id="people"></ul>
+          <p class="hint" id="modeSummary"></p>
+        </div>
+      </div>
+
+      <details id="localTools" hidden>
+        <summary>Importar o exportar respuestas</summary>
+        <p class="hint">Pegue aquí los códigos recibidos, uno por línea, para sumarlos a los resultados.</p>
+        <textarea id="importBox" aria-label="Códigos para importar"></textarea>
+        <div class="row" style="margin-top:10px">
+          <button class="btn primary" id="btnImport" type="button">Importar</button>
+          <button class="btn" id="btnExport" type="button">Copiar todos los códigos</button>
+          <button class="btn" id="btnJson" type="button">Descargar JSON</button>
+          <button class="btn danger" id="btnReset" type="button">Borrar todo</button>
+        </div>
+        <span class="status" id="statusImp" role="status"></span>
+      </details>
+    </div>
+  </section>
+
+  <footer>Horas en hora de Colombia. No se requiere iniciar sesión para responder.</footer>
+</main>
+
+<script>
+/* ============================ CONFIGURACIÓN ============================ */
+// Días y horas de la encuesta
+const START = new Date(2026, 10, 30);   // 30 de noviembre de 2026
+const N_DAYS = 6;                       // hasta el 5 de diciembre
+const HOUR_FROM = 7, HOUR_TO = 18;      // franjas 7-8, 8-9, ..., 17-18
+
+// Avisos por día (aparecen arriba y marcan la columna con un asterisco)
+const NOTICES = {
+  "2026-12-02": "El 2 de diciembre los profesores de planta estarán participando en una reunión institucional que se desarrollará durante toda la jornada.",
+  "2026-12-03": "El 3 de diciembre se llevará a cabo la celebración de fin de año de la Universidad."
+};
+
+// Modalidades de asistencia
+const MODES = { presencial:"Presencial", virtual:"Virtual", cualquiera:"Cualquiera de las dos" };
+
+// URL del Web App de Google Apps Script que guarda las respuestas en tu hoja de
+// cálculo (ver README). Mientras esté vacío la página corre en modo de prueba.
+const ENDPOINT = "";
+
+// Opcional: correo de quien organiza. Habilita el botón "Enviar por correo" del
+// código de respaldo, que solo aparece si el envío falla o en modo de prueba.
+const ORGANIZER_EMAIL = "";
+
+/* ============================ UTILIDADES ============================ */
+const STORE_KEY = "encuesta-sustentacion-2026-11-30-v2";
+const DAYS = Array.from({length:N_DAYS}, (_,i)=>{ const d=new Date(START); d.setDate(d.getDate()+i); return d; });
+const HOURS = Array.from({length:HOUR_TO-HOUR_FROM}, (_,i)=>HOUR_FROM+i);
+const N_SLOTS = N_DAYS*HOURS.length;    // 66
+const HEX_LEN = Math.ceil(N_SLOTS/4);   // 17
+const dayFmt = new Intl.DateTimeFormat("es-CO",{weekday:"short"});
+const dateFmt = new Intl.DateTimeFormat("es-CO",{day:"numeric",month:"short"});
+const dayLongFmt = new Intl.DateTimeFormat("es-CO",{weekday:"long",day:"numeric",month:"long"});
+const cap = s => s.charAt(0).toUpperCase()+s.slice(1);
+const hh = h => `${h}:00`;
+const idx = (d,h) => d*HOURS.length + h;
+const isoDay = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+const cleanName = s => String(s).replace(/[|<>\n\r\t]/g," ").replace(/\s+/g," ").trim().slice(0,60);
+const EMAIL_RE = /^[^\s@<>|]+@[^\s@<>|]+\.[^\s@<>|]+$/;
+const HEX_RE = new RegExp(`^[0-9a-f]{${HEX_LEN}}$`);
+const $ = id => document.getElementById(id);
+
+function readStore(k,fallback){ try{ const v=JSON.parse(localStorage.getItem(STORE_KEY+":"+k)); return v==null?fallback:v; }catch(e){ return fallback; } }
+function writeStore(k,v){ try{ localStorage.setItem(STORE_KEY+":"+k, JSON.stringify(v)); }catch(e){} }
+
+// bits <-> hex (66 franjas = 17 dígitos hexadecimales)
+function bitsToHex(bits){
+  let s=""; for(let i=0;i<N_SLOTS;i+=4){ let v=0; for(let j=0;j<4;j++) v=(v<<1)|(bits[i+j]?1:0); s+=v.toString(16); } return s;
+}
+function hexToBits(hex){
+  if(typeof hex!=="string" || !HEX_RE.test(hex)) return null;
+  const bits=new Array(N_SLOTS).fill(0);
+  for(let k=0;k<N_SLOTS;k++) bits[k]=(parseInt(hex[k>>2],16)>>(3-(k&3)))&1;
+  return bits;
+}
+// Valida y normaliza una respuesta venga de donde venga (servidor, código pegado, almacenamiento)
+function normalize(x){
+  if(!x || typeof x!=="object") return null;
+  const name=cleanName(x.name==null?"":x.name); const slots=String(x.slots||"").toLowerCase();
+  if(!name || !HEX_RE.test(slots)) return null;
+  const email=typeof x.email==="string" && EMAIL_RE.test(x.email.trim()) ? x.email.trim().toLowerCase() : "";
+  const mode=Object.prototype.hasOwnProperty.call(MODES,x.mode) ? x.mode : "cualquiera";
+  return {name,email,mode,slots};
+}
+function escapeHtml(s){ return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+function say(el,msg,cls){ el.textContent=msg; el.className="status "+(cls||""); }
+
+/* ============================ ESTADO ============================ */
+const REMOTE = !!ENDPOINT;
+let responses = REMOTE ? [] : (readStore("local",[])||[]).map(normalize).filter(Boolean);
+let resultsPublic = true;
+let mine = new Array(N_SLOTS).fill(0);
+let painting = false, paintValue = 1, lastPointer = "mouse", lastX = 0, lastY = 0;
+
+/* ============================ AVISOS Y MODALIDAD ============================ */
+(function(){
+  const items=DAYS.map(d=>NOTICES[isoDay(d)]).filter(Boolean);
+  if(items.length){ $("noticeList").innerHTML=items.map(t=>`<li>${escapeHtml(t)}</li>`).join(""); $("notice").hidden=false; }
+  $("modeChoices").innerHTML=Object.entries(MODES).map(([v,t])=>`<label><input type="radio" name="mode" value="${v}"> ${escapeHtml(t)}</label>`).join("");
+  $("localBanner").hidden=REMOTE; $("localTools").hidden=REMOTE;
+  if(!REMOTE) $("btnSave").textContent="Guardar disponibilidad";
+})();
+const getMode = () => { const r=document.querySelector('input[name="mode"]:checked'); return r?r.value:""; };
+const setMode = v => { const r=document.querySelector(`input[name="mode"][value="${v}"]`); if(r) r.checked=true; };
+
+/* ============================ MI GRILLA ============================ */
+const gridMine = $("gridMine");
+function headerRow(){
+  let h="<thead><tr><th></th>";
+  DAYS.forEach(d=>{
+    const note=NOTICES[isoDay(d)];
+    h+=`<th${note?` class="flagged" title="${escapeHtml(note)}"`:""}>${cap(dayFmt.format(d)).replace(".","")}${note?'<span class="flag" aria-label="Ver aviso de este día">*</span>':""}<small><span class="long">${dateFmt.format(d).replace(".","")}</span><span class="short">${d.getDate()}</span></small></th>`;
+  });
+  return h+"</tr></thead>";
+}
+const hourTh = h => `<th class="h"><span class="long">${hh(h)} – ${hh(h+1)}</span><span class="short">${h}–${h+1}</span></th>`;
+function buildMine(){
+  let html=headerRow()+"<tbody>";
+  HOURS.forEach((h,hi)=>{
+    html+=`<tr>${hourTh(h)}`;
+    DAYS.forEach((d,di)=>{ const k=idx(di,hi); html+=`<td data-k="${k}" class="${mine[k]?"on":""}" role="checkbox" aria-checked="${mine[k]?"true":"false"}" tabindex="0" aria-label="${cap(dayLongFmt.format(d))}, ${hh(h)} a ${hh(h+1)}"></td>`; });
+    html+="</tr>";
+  });
+  gridMine.innerHTML=html+"</tbody>";
+}
+function setCell(k,v){ mine[k]=v; const td=gridMine.querySelector(`td[data-k="${k}"]`); td.classList.toggle("on",!!v); td.setAttribute("aria-checked",v?"true":"false"); }
+gridMine.addEventListener("pointerdown",e=>{
+  lastPointer=e.pointerType; if(e.pointerType!=="mouse") return;   // en táctil se alterna con el toque (click)
+  const td=e.target.closest("td[data-k]"); if(!td) return; e.preventDefault();
+  if(td.hasPointerCapture && td.hasPointerCapture(e.pointerId)) td.releasePointerCapture(e.pointerId);
+  const k=+td.dataset.k; paintValue=mine[k]?0:1; painting=true; lastX=e.clientX; lastY=e.clientY; setCell(k,paintValue);
+});
+gridMine.addEventListener("pointermove",e=>{
+  if(!painting) return;
+  // Interpola entre el punto anterior y el actual para no saltarse celdas en arrastres rápidos
+  const dx=e.clientX-lastX, dy=e.clientY-lastY, steps=Math.max(1,Math.ceil(Math.hypot(dx,dy)/8));
+  for(let i=1;i<=steps;i++){
+    const el=document.elementFromPoint(lastX+dx*i/steps,lastY+dy*i/steps); const td=el&&el.closest?el.closest("#gridMine td[data-k]"):null;
+    if(td && mine[+td.dataset.k]!==paintValue) setCell(+td.dataset.k,paintValue);
+  }
+  lastX=e.clientX; lastY=e.clientY;
+});
+gridMine.addEventListener("click",e=>{
+  if(lastPointer==="mouse") return; const td=e.target.closest("td[data-k]"); if(td){ const k=+td.dataset.k; setCell(k,mine[k]?0:1); }
+});
+window.addEventListener("pointerup",()=>{ painting=false; });
+window.addEventListener("pointercancel",()=>{ painting=false; });
+gridMine.addEventListener("keydown",e=>{ if(e.key===" "||e.key==="Enter"){ const td=e.target.closest("td[data-k]"); if(td){ e.preventDefault(); const k=+td.dataset.k; setCell(k,mine[k]?0:1); } } });
+
+$("btnClear").onclick=()=>{ mine.fill(0); buildMine(); };
+$("btnAll").onclick=()=>{ mine.fill(1); buildMine(); };
+
+/* ============================ ENVIAR ============================ */
+const nameInput=$("name"), emailInput=$("email"), statusMine=$("statusMine");
+function showCode(rec){
+  const code=JSON.stringify(rec);
+  $("codeOut").value=code; $("codeBox").hidden=false; $("codeHint").hidden=false;
+  const mail=$("btnMail");
+  if(ORGANIZER_EMAIL){ mail.hidden=false; mail.href=`mailto:${ORGANIZER_EMAIL}?subject=${encodeURIComponent("Encuesta de horarios: "+rec.name)}&body=${encodeURIComponent(code)}`; }
+}
+function hideCode(){ $("codeBox").hidden=true; $("codeHint").hidden=true; }
+function upsert(rec){ const i=responses.findIndex(r=>r.email && r.email===rec.email); if(i>=0) responses[i]=rec; else responses.push(rec); }
+
+$("btnSave").onclick=async ()=>{
+  const name=cleanName(nameInput.value), email=emailInput.value.trim().toLowerCase(), mode=getMode();
+  if(!name){ say(statusMine,"Escriba su nombre.","warn"); nameInput.focus(); return; }
+  if(!EMAIL_RE.test(email)){ say(statusMine,"Escriba un correo válido.","warn"); emailInput.focus(); return; }
+  if(!mode){ say(statusMine,"Indique si prefiere presencial o virtual.","warn"); document.querySelector('input[name="mode"]').focus(); return; }
+  if(!mine.some(Boolean)){ say(statusMine,"Marque al menos una hora.","warn"); return; }
+  const rec={name,email,mode,slots:bitsToHex(mine)};
+  writeStore("me",rec);
+  if(!REMOTE){
+    upsert(rec); writeStore("local",responses); showCode(rec); renderResults();
+    say(statusMine,"Guardado en este navegador.","ok"); return;
+  }
+  const btn=$("btnSave"); btn.disabled=true; say(statusMine,"Enviando…","");
+  try{
+    // Sin cabeceras: va como text/plain y evita la verificación previa de CORS de Apps Script
+    const r=await fetch(ENDPOINT,{method:"POST",body:JSON.stringify(rec),redirect:"follow"});
+    const d=await r.json(); if(!d || d.ok!==true) throw new Error((d&&d.error)||"respuesta no válida");
+    hideCode(); say(statusMine,"Respuesta recibida, muchas gracias. Si necesita cambiarla, vuelva a enviarla con el mismo correo.","ok");
+    pullRemote();
+  }catch(e){
+    showCode(rec); say(statusMine,"No se pudo enviar. Por favor copie el código de abajo y envíelo a quien organiza.","warn");
+  }finally{ btn.disabled=false; }
+};
+$("btnCopy").onclick=async ()=>{
+  const out=$("codeOut");
+  try{ await navigator.clipboard.writeText(out.value); say(statusMine,"Código copiado.","ok"); }catch(e){ out.select(); say(statusMine,"Seleccione y copie el código.","warn"); }
+};
+
+/* ============================ RESULTADOS ============================ */
+const gridRes=$("gridRes"), rankEl=$("rank"), peopleEl=$("people"), cellNames=$("cellNames"), legend=$("legend");
+const entries = () => responses.map(r=>({...r,bits:hexToBits(r.slots)})).filter(e=>e.bits);
+function slotLabel(k){ const di=Math.floor(k/HOURS.length), hi=k%HOURS.length; return `${cap(dayLongFmt.format(DAYS[di]))}, ${hh(HOURS[hi])} – ${hh(HOURS[hi]+1)}`; }
+function renderResults(){
+  $("resPrivate").hidden=resultsPublic; $("resBody").hidden=!resultsPublic;
+  const es=entries(); const n=es.length;
+  $("nCount").textContent=resultsPublic&&n?`(${n})`:""; $("nPeople").textContent=n;
+  const counts=new Array(N_SLOTS).fill(0); es.forEach(e=>e.bits.forEach((b,k)=>{ if(b) counts[k]++; }));
+  const max=Math.max(0,...counts);
+  let html=headerRow()+"<tbody>";
+  HOURS.forEach((h,hi)=>{
+    html+=`<tr>${hourTh(h)}`;
+    DAYS.forEach((d,di)=>{ const k=idx(di,hi); const c=counts[k]; const lvl=c===0?0:Math.max(1,Math.ceil(c/n*5)); const best=max>0&&c===max?" best":"";
+      html+=`<td data-k="${k}" class="c${lvl}${best}" tabindex="0" aria-label="${slotLabel(k)}: ${c} de ${n}">${n?c:""}</td>`; });
+    html+="</tr>";
+  });
+  gridRes.innerHTML=html+"</tbody>";
+  legend.innerHTML = n ? `<span><i style="background:var(--free)"></i>Nadie</span><span><i style="background:var(--h1)"></i>Pocos</span><span><i style="background:var(--h3)"></i>Más de la mitad</span><span><i style="background:var(--h5)"></i>Todos (${n})</span><span><i style="outline:3px solid var(--ok);outline-offset:-3px"></i>Mejor horario</span>` : "";
+  const ranked=counts.map((c,k)=>({c,k})).filter(x=>x.c>0).sort((a,b)=>b.c-a.c||a.k-b.k).slice(0,8);
+  rankEl.innerHTML = ranked.length ? ranked.map(x=>`<li>${slotLabel(x.k)}: <b>${x.c} de ${n}</b></li>`).join("") : "<li>Aún no hay respuestas.</li>";
+  peopleEl.innerHTML = es.map((e,i)=>`<li>${escapeHtml(e.name)}<span>, ${escapeHtml(MODES[e.mode].toLowerCase())}, ${e.bits.filter(Boolean).length} h</span>${REMOTE?"":`<button type="button" title="Eliminar" aria-label="Eliminar a ${escapeHtml(e.name)}" data-del="${i}">quitar</button>`}</li>`).join("");
+  $("modeSummary").textContent = n ? Object.entries(MODES).map(([v,t])=>`${t}: ${es.filter(e=>e.mode===v).length}`).join("; ") : "";
+  cellNames.textContent="";
+}
+function showCell(td){
+  const k=+td.dataset.k; const who=entries().filter(x=>x.bits[k]).map(x=>x.name);
+  cellNames.textContent = `${slotLabel(k)}: ` + (who.length? who.join(", ") : "nadie");
+}
+gridRes.addEventListener("click",e=>{ const td=e.target.closest("td[data-k]"); if(td) showCell(td); });
+gridRes.addEventListener("keydown",e=>{ if(e.key===" "||e.key==="Enter"){ const td=e.target.closest("td[data-k]"); if(td){ e.preventDefault(); showCell(td); } } });
+peopleEl.addEventListener("click",e=>{
+  const b=e.target.closest("button[data-del]"); if(!b || REMOTE) return;
+  const i=+b.dataset.del, r=responses[i]; if(r && confirm(`¿Eliminar la respuesta de ${r.name}?`)){ responses.splice(i,1); writeStore("local",responses); renderResults(); }
+});
+
+/* ============================ IMPORTAR / EXPORTAR (modo de prueba) ============================ */
+const statusImp=$("statusImp");
+$("btnImport").onclick=()=>{
+  const lines=$("importBox").value.split(/\r?\n/).filter(l=>l.trim());
+  if(!lines.length){ say(statusImp,"Pegue al menos un código.","warn"); return; }
+  let ok=0, bad=0;
+  lines.forEach(l=>{ let r=null; try{ r=normalize(JSON.parse(l)); }catch(e){} if(r){ if(r.email) upsert(r); else responses.push(r); ok++; } else bad++; });
+  writeStore("local",responses); renderResults();
+  say(statusImp, `${ok} respuesta${ok===1?"":"s"} importada${ok===1?"":"s"}${bad?`, ${bad} línea${bad===1?"":"s"} no válida${bad===1?"":"s"}`:""}.`, bad?"warn":"ok");
+  if(ok && !bad) $("importBox").value="";
+};
+$("btnExport").onclick=async ()=>{
+  const txt=responses.map(r=>JSON.stringify(r)).join("\n");
+  if(!txt){ say(statusImp,"Aún no hay respuestas para exportar.","warn"); return; }
+  try{ await navigator.clipboard.writeText(txt); say(statusImp,"Códigos copiados.","ok"); }catch(e){ $("importBox").value=txt; say(statusImp,"Los códigos están en el cuadro de texto; cópielos desde ahí.","warn"); }
+};
+$("btnJson").onclick=()=>{
+  const data={encuesta:document.title,dias:DAYS.map(isoDay),horas:HOURS,respuestas:entries().map(e=>({nombre:e.name,correo:e.email,modalidad:MODES[e.mode],disponible:e.bits}))};
+  const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"}); const a=document.createElement("a");
+  a.href=URL.createObjectURL(blob); a.download="encuesta-horarios.json"; document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+};
+$("btnReset").onclick=()=>{ if(confirm("¿Borrar todas las respuestas guardadas en este navegador?")){ responses=[]; writeStore("local",responses); renderResults(); say(statusImp,"Respuestas borradas.","ok"); } };
+
+/* ============================ PESTAÑAS ============================ */
+const tabs=[["tab-mine","panel-mine"],["tab-results","panel-results"]];
+tabs.forEach(([t,p])=>$(t).onclick=()=>{
+  tabs.forEach(([t2,p2])=>{ const on=t2===t; $(t2).setAttribute("aria-selected",on?"true":"false"); $(p2).hidden=!on; });
+  if(p==="panel-results"){ renderResults(); pullRemote(); }
+});
+
+/* ============================ HOJA DE RESPUESTAS ============================ */
+// El servidor devuelve {public:true, responses:[{name,mode,slots}]} y nunca los correos.
+async function pullRemote(){
+  if(!REMOTE) return;
+  try{
+    const r=await fetch(ENDPOINT,{redirect:"follow"}); const d=await r.json();
+    resultsPublic = !(d && d.public===false);
+    responses = resultsPublic && d && Array.isArray(d.responses) ? d.responses.map(normalize).filter(Boolean) : [];
+    renderResults();
+  }catch(e){}
+}
+
+/* ============================ INICIO ============================ */
+(function(){
+  const me=normalize(readStore("me",null));     // lo último que esta persona envió desde este navegador
+  if(me){ nameInput.value=me.name; emailInput.value=me.email; setMode(me.mode); mine=hexToBits(me.slots); }
+  buildMine(); renderResults(); pullRemote();
+})();
+</script>
+</body>
+</html>
